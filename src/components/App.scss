@@ -1,0 +1,100 @@
+body{
+    margin:0;
+    padding:0;
+}
+.card-container{
+    margin:2rem 1rem 1rem 1rem;
+    @media (min-width:700px){
+        margin-left:2rem;
+        margin-right: 2rem;
+    }
+    @media (min-width:1000px){
+        margin: 2rem 7% 1rem 7%;
+    }
+    // display:grid;
+    // @media (min-width:700px){
+    //     grid-template-columns:1fr 1fr;
+    // }
+    // @media (min-width:100px){
+    //     grid-template-columns:1fr 1fr 1fr;
+    // }
+    // @media (min-width:1400px){
+    //     grid-template-columns: 1fr 1fr 1fr 1fr;
+    // }
+    display:flex;
+    flex-wrap: wrap;
+    .user-card{
+        background:rgba(247, 24, 98,.3);
+        height:15rem;
+        width:calc(100% - .5rem);
+        position:relative;
+        @media (min-width:700px){
+            width:calc(50% - 1rem);
+        }
+        @media(min-width:1100px){
+            width:calc(33% - .8rem);
+        }
+        @media (min-width:1500px){
+            width:calc(25% - 1rem);
+        }
+        border-radius:.4rem;
+        cursor:pointer;
+        margin:.5rem;
+        .img-and-name-container{
+            display:flex;
+            padding:.2rem .5rem;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom:2px solid rgb(220,220,220); 
+            .name-container{
+                font-size:1.1rem;
+                color:black;
+                font-weight:bolder;
+            }
+            .img-container{
+                height:4.5rem;
+                width:4.5rem;
+                border-radius:100%;
+                position:relative;
+                overflow:hidden;
+                background:white;
+                top:2rem;
+                img{
+                    height:100%;
+                    width:100%;
+                }
+            }
+        }
+        ul{
+            // margin:.5rem 1rem;
+            list-style-type: none;
+            padding:0;
+            li{
+                padding:.2rem .5rem;
+                font-size:.9rem;
+                color:black;
+                label{
+                    font-weight: bold;
+                    display:inline-block;
+                    width:8rem;
+                    font-size:.8rem;
+                }
+            }
+        }
+        .rank-container{
+            position:absolute;
+            background:rgb(1, 160, 1);
+            border-radius:100%;
+            height:1.3rem;
+            width:1.3em;
+            font-size:.9rem;
+            font-weight: bold;
+            color:white;
+            display:flex;
+            align-items: center;
+            justify-content: center;
+            right:-.3rem;
+            top:-.3rem;
+        }
+    }
+}
