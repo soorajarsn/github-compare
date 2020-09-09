@@ -6,7 +6,6 @@ import "./theme.scss";
 import "./App.scss";
 import Loader from "./Loader";
 function Card({ user,rank }) {
-    console.log(user);
   return (
     <div className="user-card">
       <div className="img-and-name-container">
@@ -42,13 +41,8 @@ function Card({ user,rank }) {
   );
 }
 function NotificationCard({error}){
-    function removeNotification(){
-        let container = document.querySelector('#portal');
-        container.removeChild(container.firstChild);
-    }
     return <div style={{position:"relative"}}>
         <span className="info">{error}</span>
-        <span style={{position:"absolute",right:".4rem",top:"25%",color:"white",fontWeight:"bold"}} onClick={removeNotification}>x</span>
     </div>
 }
 function App(props) {

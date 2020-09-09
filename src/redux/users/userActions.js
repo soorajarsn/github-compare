@@ -24,7 +24,6 @@ export const getUser = url => {
         dispatch(getUserSuccess(processedData));
       })
       .catch(err => {
-        console.log(err.response.data);
         if (err.response && err.response.data && err.response.data.message) dispatch(getUserError("Uh Oh, " + err.response.data.message));
         else dispatch(getUserError("Something went wrong"));
       });

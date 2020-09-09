@@ -25,10 +25,14 @@ form{
             font-size:1rem;
             padding-left: .5rem;
             border: 0;
+            outline:none;
+            &:active,&:focus{
+                outline:none;
+            }
         }
-        &:active,&:active,&:hover,&:focus-within,&:visited{
+        &:active,&:hover,&:focus{
             border:2px solid rgb(247, 24, 98);
-            outline: none;;
+            outline: none;
         }
     }
     .button-container{
@@ -44,6 +48,9 @@ form{
             border: 2px solid rgb(247, 24, 98);
             border-radius:.3rem;
             cursor: pointer;
+            &:active,&:focus{
+                outline:none;
+            }
         }
         &:hover{
             transform: scale(1.01);
